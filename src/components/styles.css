@@ -1,6 +1,6 @@
 .inputForm {
   display: flex;
-  width: 90%;
+  width: 95%;
   position: relative;
   align-items: center;
 }
@@ -41,22 +41,41 @@
   box-shadow: 0 0 5px black;
 }
 
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .todos {
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
-  flex-wrap: wrap;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(50, 195, 205);
+}
+
+.todosHeading {
+  font-size: 30px;
+  color: white;
 }
 
 .todosSingle {
   display: flex;
-  width: 29.5%;
   border-radius: 5px;
   padding: 20px;
   margin-top: 15px;
   background-color: goldenrod;
+  transition: 0.2s;
 }
 
+.todosSingle:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
+}
 .todosSingleText {
   flex: 1;
   padding: 5px;
@@ -78,10 +97,13 @@
   box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
   outline: none;
 }
+.done {
+  background-color: tomato;
+}
 
-@media (max-width: 1200px) {
-  .todosSingle {
-    width: 40%;
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
   }
 }
 
@@ -93,8 +115,10 @@
   .todos {
     width: 95%;
     margin-right: 15px;
+    margin-bottom: 10px;
   }
-  .todosSingle {
-    width: 100%;
+  .container {
+    width: 95%;
+    flex-direction: column;
   }
 }
